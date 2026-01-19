@@ -4,15 +4,10 @@ export type { ButtonProps, InputProps } from './components'
 import './styles/index.scss'
 
 // 导出安装函数，用于app.use()
-export const install = (app: App) => {
+const install = (app: App) => {
   // 注册所有组件
   app.component('ZgButton', Button)
   app.component('ZgInput', Input)
-}
-
-// 默认导出组件库
-export default {
-  install
 }
 
 /**
@@ -55,10 +50,12 @@ import type { ButtonPropsWithEl, InputPropsWithEl } from './components';
 // 创建一个类型增强视图：运行时仍是原始组件，但类型上暴露完整 props
 const ZgButton = Button as DefineComponent<ButtonPropsWithEl>;
 const ZgInput = Input as DefineComponent<InputPropsWithEl>;
-export {
+
+const UiLib = {
+  install,
   ZgButton,
-  ZgInput
-};
+  ZgInput,
+} as const;
 
 // 为 TSX/JSX 使用场景提供类型支持
 declare global {
@@ -81,3 +78,7 @@ declare module 'vue' {
     // }>;
   }
 }
+
+
+// 默认导出组件库
+export default UiLib;

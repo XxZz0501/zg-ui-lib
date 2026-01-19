@@ -5,9 +5,13 @@
     @click="handleClick"
     @blur="handleBlur"
   >
-    <template v-for="(_, slotName) in $slots" #[slotName]="scope">
+    <!-- <template v-for="(_, slotName) in $slots" #[slotName]="scope">
       <slot :name="slotName" v-bind="scope"></slot>
-    </template>
+    </template> -->
+    <template #prefix><slot name="prefix" /></template>
+    <template #suffix><slot name="suffix" /></template>
+    <template #prepend><slot name="prepend" /></template>
+    <template #append><slot name="append" /></template>
   </el-input>
 </template>
 
