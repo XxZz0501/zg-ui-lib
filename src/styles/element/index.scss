@@ -1,0 +1,36 @@
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #9419e6,
+    ),
+    'success': (
+      'base': #67c23a,
+    ),
+    'warning': (
+      'base': #e6a23c,
+    ),
+    'danger': (
+      'base': #f56c6c,
+    ),
+    'info': (
+      'base': #909399,
+    )
+  ),
+  $font-size: (
+    'extra-large': 20px,
+    'large': 18px,
+    'medium': 16px,
+    'base': 14px,
+    'small': 13px,
+    'extra-small': 12px
+  ),
+  $border-radius: (
+    'base': 4px,
+    'small': 2px,
+    'round': 20px,
+    'circle': 100%
+  )
+);
+
+// 导入Element Plus的样式源文件
+@use "element-plus/theme-chalk/src/index.scss" as *;

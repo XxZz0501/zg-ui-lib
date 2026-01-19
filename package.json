@@ -1,0 +1,55 @@
+{
+  "name": "@zggj/ui-lib",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "基于Element-Plus的二次开发组件库",
+  "keywords": [
+    "vue",
+    "vue3",
+    "element-plus",
+    "component",
+    "ui"
+  ],
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./dist/*": "./dist/*"
+  },
+  "files": [
+    "dist",
+    "src/types/global-components.d.ts"
+  ],
+  "scripts": {
+    "dev": "vue-tsc -b && vite build --watch",
+    "build": "vue-tsc -b && vite build"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2"
+  },
+  "peerDependencies": {
+    "element-plus": "^2.13.1",
+    "vue": "^3.5.24"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "element-plus": "^2.13.1",
+    "sass": "^1.97.2",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4",
+    "vite-plugin-dts": "^4.5.4",
+    "vue": "^3.5.24",
+    "vue-tsc": "^3.2.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
