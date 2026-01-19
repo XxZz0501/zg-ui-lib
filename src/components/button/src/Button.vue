@@ -18,10 +18,8 @@ defineOptions({
 
 const props = withDefaults(defineProps<ButtonProps>(), {
   customClass: '',
-
   trackable: false,
   trackName: 'button',
-
   trackLabel: '按钮',
   trackExtra: () => ({}),
 })
@@ -31,7 +29,5 @@ const { handleClick } = useTrackableEvents(props, 'ZgButton')
 
 <style scoped>
 .zg-button {
-  /* 可以添加自定义样式覆盖或扩展Element-Plus样式 1*/
-  font-weight: 500;
 }
 </style>
