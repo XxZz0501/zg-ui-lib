@@ -14,7 +14,7 @@
     ),
     'info': (
       'base': #909399,
-    )
+    ),
   ),
   $font-size: (
     'extra-large': 20px,
@@ -22,15 +22,15 @@
     'medium': 16px,
     'base': 14px,
     'small': 13px,
-    'extra-small': 12px
+    'extra-small': 12px,
   ),
   $border-radius: (
     'base': 4px,
     'small': 2px,
     'round': 20px,
-    'circle': 100%
+    'circle': 100%,
   )
 );
 
 // 导入Element Plus的样式源文件
-@use "element-plus/theme-chalk/src/index.scss" as *;
+@use 'element-plus/theme-chalk/src/index.scss' as *;

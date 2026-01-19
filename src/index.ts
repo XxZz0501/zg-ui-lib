@@ -45,24 +45,24 @@ const install = (app: App) => {
  * ============================================================================
  */
 
-import type { ButtonPropsWithEl, InputPropsWithEl } from './components';
+import type { ButtonPropsWithEl, InputPropsWithEl } from './components'
 
 // 创建一个类型增强视图：运行时仍是原始组件，但类型上暴露完整 props
-const ZgButton = Button as DefineComponent<ButtonPropsWithEl>;
-const ZgInput = Input as DefineComponent<InputPropsWithEl>;
+const ZgButton = Button as DefineComponent<ButtonPropsWithEl>
+const ZgInput = Input as DefineComponent<InputPropsWithEl>
 
 const UiLib = {
   install,
   ZgButton,
   ZgInput,
-} as const;
+} as const
 
 // 为 TSX/JSX 使用场景提供类型支持
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      'zg-button': DefineComponent<ButtonPropsWithEl>;
-      'zg-input': DefineComponent<InputPropsWithEl>;
+      'zg-button': DefineComponent<ButtonPropsWithEl>
+      'zg-input': DefineComponent<InputPropsWithEl>
     }
   }
 }
@@ -70,8 +70,8 @@ declare global {
 // 为 Vue SFC 模板中的 <zg-button> 提供全局组件类型提示
 declare module 'vue' {
   export interface GlobalComponents {
-    ZgButton: typeof ZgButton;
-    ZgInput: typeof ZgInput;
+    ZgButton: typeof ZgButton
+    ZgInput: typeof ZgInput
     // ZgButton: DefineComponent<ButtonPropsWithEl>;
     // ZgButton: ComponentPublicInstance<{
     //   $props: ButtonPropsWithEl;
@@ -79,6 +79,5 @@ declare module 'vue' {
   }
 }
 
-
 // 默认导出组件库
-export default UiLib;
+export default UiLib
