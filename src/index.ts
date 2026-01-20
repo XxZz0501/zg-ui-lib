@@ -72,10 +72,6 @@ declare module 'vue' {
   export interface GlobalComponents {
     ZgButton: typeof ZgButton
     ZgInput: typeof ZgInput
-    // ZgButton: DefineComponent<ButtonPropsWithEl>;
-    // ZgButton: ComponentPublicInstance<{
-    //   $props: ButtonPropsWithEl;
-    // }>;
   }
 }
 
